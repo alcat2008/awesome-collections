@@ -1,0 +1,70 @@
+body {
+  background: #fff;
+}
+
+.numberInput {
+  label {
+    display: block;
+    padding: 22px 0 21px 30px;
+    font-size: 24px;
+    color: #A4A9B0;
+  }
+
+  :global {
+    .am-list-item {
+      border-bottom: 1px solid #ddd;
+
+      &:after {
+        visibility: hidden;
+      }
+
+      input {
+        font-size: 64px;
+        color: #000000;
+        line-height: 60px;
+      }
+    }
+  }
+}
+
+.selection {
+  margin: 34px 30px 0 30px;
+
+  .group:first-child {
+    margin-bottom: 21px;
+  }
+
+  .option {
+    width: 216px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+
+    &.small {
+      width: 180px;
+      height: 100px;
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
+  text-align: center;
+
+  .divider {
+    border-right: 1px solid #566B96;
+    margin: 0 21px;
+    display: inline-block;
+    height: 20.8px;
+  }
+
+  a {
+    font-size: 26px;
+    color: #566B96;
+  }
+}
+

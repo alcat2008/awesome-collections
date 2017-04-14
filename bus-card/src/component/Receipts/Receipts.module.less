@@ -1,0 +1,52 @@
+.sectionHeader {
+  font-size: 30px;
+  color: #000000;
+  line-height: 42px;
+}
+
+.row {
+  .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .line {
+    font-size: 30px;
+    line-height: 42px;
+    color: #000000;
+  }
+
+  .time {
+    font-size: 24px;
+    line-height: 33px;
+    color: #909090;
+  }
+
+  .amount {
+    font-size: 36px;
+    line-height: 50px;
+    color: #010101;
+
+    &.failed {
+      color: #F03B28;
+    }
+  }
+
+  .type {
+    font-size: 24px;
+    line-height: 33px;
+    color: #909090;
+  }
+}
+
+:global {
+  .am-list-item .am-list-line .am-list-content {
+    padding-top: 25px;
+    padding-bottom: 22px;
+  }
+
+  .am-indexed-list-section-header .am-list-item {
+    height: 70px;
+  }
+}

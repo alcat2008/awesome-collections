@@ -1,0 +1,52 @@
+{
+  "name": "antm-boilerplate-bus-card",
+  "version": "0.0.1",
+  "description": "公交码付款",
+  "scripts": {
+    "start": "NODE_ENV=development dora -p 8001 --plugins webpack",
+    "test": "atool-test-mocha",
+    "lint": "eslint --ext .js,.jsx src",
+    "build": "NODE_ENV=production atool-build -o www --config ./webpack.config.js"
+  },
+  "keywords": [
+    "standard"
+  ],
+  "author": "",
+  "entry": {
+    "get_card": "./src/entry/get_card",
+    "card_detail": "./src/entry/card_detail",
+    "cities": "./src/entry/cities",
+    "receipts": "./src/entry/receipts",
+    "recharge": "./src/entry/recharge",
+    "recharge_result": "./src/entry/recharge_result",
+    "recharge_records": "./src/entry/recharge_records",
+    "auto_recharge_setup": "./src/entry/auto_recharge_setup",
+    "auto_recharge_result": "./src/entry/auto_recharge_result",
+    "return_result": "./src/entry/return_result"
+  },
+  "dependencies": {
+    "antd-mobile": "~1.0.0-alpha.9",
+    "classnames": "^2.2.5",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-media": "^1.4.0"
+  },
+  "devDependencies": {
+    "atool-build": "^0.9.0",
+    "atool-test-mocha": "^0.1.6",
+    "babel-eslint": "~6.0.0",
+    "babel-plugin-import": "^1.1.0",
+    "dora": "^0.4.0",
+    "dora-plugin-config-manager": "^0.2.3",
+    "dora-plugin-livereload": "^0.5.0",
+    "dora-plugin-webpack": "^0.8.x",
+    "eslint": "2.x",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^5.2.2",
+    "html-webpack-plugin": "^2.22.0",
+    "postcss-plugin-px2rem": "^0.6.0",
+    "svg-sprite-loader": "^0.1.2"
+  }
+}

@@ -1,0 +1,76 @@
+.card:global {
+  position: relative;
+  background: url(Card.png) center no-repeat;
+  background-size: 100% 435px;
+  height: 435px;
+  margin: 35px 30px 0 30px;
+  padding-top: 57px;
+  border-radius: 35px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+
+  .logo {
+    width: 94px;
+    height: 94px;
+    margin-left: 50px;
+    margin-right: 31px;
+    border-radius: 50%;
+    border: 2px solid #0079D1;
+  }
+
+  .name {
+    font-size: 42px;
+    color: #FFFFFF;
+    line-height: 59px;
+    margin-bottom: 7px;
+  }
+
+  .type {
+    display: inline-block;
+    line-height: 40px;
+    background: #FFF046;
+    border-radius: 8px;
+    font-size: 28px;
+    color: #956746;
+    padding: 0 14px;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 54px;
+  display: flex;
+  height: 89px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  .number {
+    font-size: 30px;
+    color: #3CC4FF;
+    margin-left: 55px;
+  }
+
+  .amount {
+    font-size: 40px;
+    color: #FFFFFF;
+    margin-right: 36px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 34px;
+      height: 34px;
+      margin-left: 11px;
+    }
+  }
+}
+
+.message {
+  font-size: 34px;
+  line-height: 48px;
+  color: #000000;
+}

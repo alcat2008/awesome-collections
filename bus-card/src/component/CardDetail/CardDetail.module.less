@@ -1,0 +1,64 @@
+body {
+  background: #fff;
+}
+
+.actionList {
+  margin-top: 47px;
+
+  :global {
+    .am-list-body {
+      border: none;
+      padding-right: 30px;
+
+      &:after {
+        visibility: hidden;
+      }
+    }
+
+    .am-list-item {
+      height: 100px;
+
+      .am-list-line {
+        padding-right: 0;
+
+        .am-list-extra {
+          flex-basis: auto;
+        }
+      }
+
+      &:first-child:before {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 30px;
+        top: 0;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+      }
+
+      &:last-child:after {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 30px;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+  }
+}
+
+.message {
+  font-size: 34px;
+  line-height: 48px;
+  color: #000000;
+
+  p {
+    margin: 0;
+  }
+}
+
+.returnNotice {
+  text-align: left;
+}

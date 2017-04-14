@@ -1,0 +1,73 @@
+body {
+  background: #fff;
+}
+
+.actionList {
+  margin-top: 47px;
+
+  :global {
+    .am-list-body {
+      border: none;
+      padding-right: 30px;
+
+      &:after {
+        visibility: hidden;
+      }
+    }
+
+    .am-list-item {
+      min-height: 100px;
+
+      .am-list-line {
+        padding-right: 0;
+
+        .am-list-extra {
+          flex-basis: auto;
+        }
+      }
+
+      select {
+        font-size: 32px;
+        text-align: right;
+
+        &[disabled] {
+          color: #A1A1A1;
+        }
+      }
+
+      &:first-child:before {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 30px;
+        top: 0;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+      }
+
+      &:last-child:after {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 30px;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+  }
+}
+
+.submitBtn {
+  margin: 85.5px 30px 0 30px;
+}
+
+.editBtn {
+  margin: 85.5px 30px 0 30px;
+  display: flex;
+  justify-content: space-between;
+
+  a[role="button"] {
+    width: 336px;
+  }
+}
