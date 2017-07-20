@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>loader2</title>
+    <meta name="description" content="loader2">
+
+    <style>
+      .b-preloader {
+        background-color: #2c323e;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 15;
+        transition: opacity 1s;
+      }
+
+      .b-preloader_hidden {
+        opacity: 0;
+      }
+
+      .b-preloader__spinner {
+        display: flex;
+        height: 55px;
+        text-align: center;
+        font-size: 10px;
+      }
+
+      .loader {
+        left: 50%;
+        top: 50%;
+        position: fixed;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+        .loader #spinner {
+          box-sizing: border-box;
+          stroke: #fff;
+          stroke-width: 3px;
+          -webkit-transform-origin: 50%;
+                  transform-origin: 50%;
+          -webkit-animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite;
+                  animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite; }
+
+      @-webkit-keyframes rotate {
+        from {
+          -webkit-transform: rotate(0);
+                  transform: rotate(0); }
+        to {
+          -webkit-transform: rotate(450deg);
+                  transform: rotate(450deg); } }
+
+      @keyframes rotate {
+        from {
+          -webkit-transform: rotate(0);
+                  transform: rotate(0); }
+        to {
+          -webkit-transform: rotate(450deg);
+                  transform: rotate(450deg); } }
+
+      @-webkit-keyframes line {
+        0% {
+          stroke-dasharray: 2, 85.964;
+          -webkit-transform: rotate(0);
+                  transform: rotate(0); }
+        50% {
+          stroke-dasharray: 65.973, 21.9911;
+          stroke-dashoffset: 0; }
+        100% {
+          stroke-dasharray: 2, 85.964;
+          stroke-dashoffset: -65.973;
+          -webkit-transform: rotate(90deg);
+                  transform: rotate(90deg); } }
+
+      @keyframes line {
+        0% {
+          stroke-dasharray: 2, 85.964;
+          -webkit-transform: rotate(0);
+                  transform: rotate(0); }
+        50% {
+          stroke-dasharray: 65.973, 21.9911;
+          stroke-dashoffset: 0; }
+        100% {
+          stroke-dasharray: 2, 85.964;
+          stroke-dashoffset: -65.973;
+          -webkit-transform: rotate(90deg);
+                  transform: rotate(90deg); } }
+
+    </style>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <div>Aha, you can see me now!</div>
+
+    <div class="b-preloader">
+      <div class="b-preloader__spinner">
+        <div class="loader">
+          <svg viewBox="0 0 32 32" width="32" height="32">
+            <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    function hidePreloader() {
+      const preloader = document.querySelector('.b-preloader');
+      preloader.classList.add('b-preloader_hidden');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1050);
+    }
+
+    setTimeout(hidePreloader, 5000);
+    </script>
+  </body>
+</html>
